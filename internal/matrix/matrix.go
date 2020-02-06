@@ -62,6 +62,7 @@ func (m Matrix) Columns() int {
 	return m.columns
 }
 
+// index returns index for given row and column in values slice.
 func (m Matrix) index(row, column int) int {
 	if (row < 0) || (row > m.rows-1) || (column < 0) || (column > m.columns-1) {
 		panic(fmt.Sprintf("index (%d, %d) out of range for matrix %dx%d", row, column, m.rows, m.columns))

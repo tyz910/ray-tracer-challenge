@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 
 	"github.com/tyz910/ray-tracer-challenge/internal/canvas"
 	"github.com/tyz910/ray-tracer-challenge/internal/canvas/image"
@@ -51,11 +50,9 @@ func main() {
 		p = tick(e, p)
 		i++
 
-		x := int(math.Ceil(p.Position.X()))
-		y := int(math.Ceil(float64(c.Height()) - p.Position.Y()))
-		if c.Contains(x, y) {
-			c.SetPixel(x, y, color.New(p.Position.Y()/float64(c.Height()), 0.3, 0.3))
-		}
+		x := p.Position.X()
+		y := float64(c.Height()) - p.Position.Y()
+		c.WritePixel(x, y, color.New(p.Position.Y()/float64(c.Height()), 0.3, 0.3))
 	}
 
 	fmt.Printf("\nNumber of ticks: %d\n", i)

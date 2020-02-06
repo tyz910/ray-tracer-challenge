@@ -2,6 +2,7 @@ package canvas
 
 import (
 	"fmt"
+	"math"
 
 	"github.com/tyz910/ray-tracer-challenge/internal/color"
 )
@@ -56,4 +57,14 @@ func (cnv Canvas) Pixel(x, y int) color.Color {
 // SetPixel sets the color of the pixel at position (x, y) to c.
 func (cnv Canvas) SetPixel(x, y int, c color.Color) {
 	cnv.pixels[cnv.index(x, y)] = c
+}
+
+// WritePixel sets the color of the pixel at position (x, y) to c if  it's position within canvas.
+func (cnv Canvas) WritePixel(x, y float64, c color.Color) {
+	xPos := int(math.Ceil(x))
+	yPos := int(math.Ceil(y))
+
+	if cnv.Contains(xPos, yPos) {
+		cnv.SetPixel(xPos, yPos, c)
+	}
 }
