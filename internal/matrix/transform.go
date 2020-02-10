@@ -13,7 +13,7 @@ func Translation(x, y, z float64) Matrix {
 	})
 }
 
-// Translation creates a new scaling matrix.
+// Scaling creates a new scaling matrix.
 // This transformation matrix used to alter size of an object along given axes.
 func Scaling(x, y, z float64) Matrix {
 	return New(4, 4, []float64{

@@ -13,7 +13,7 @@ import (
 
 func main() {
 	size := 300
-	points := 60
+	points := 12
 
 	cnv := canvas.New(size, size)
 	center := tuple.Point(0.0, 0.0, 0.0)
@@ -29,10 +29,7 @@ func main() {
 
 		fmt.Println(h, p)
 
-		x := p.X()
-		y := float64(cnv.Width()) - p.Y()
-		c := float64(h) / float64(points)
-		cnv.WritePixel(x, y, color.New(c, 1.0-c, 0.0))
+		cnv.WritePixel(p.X(), float64(cnv.Width())-p.Y(), color.White())
 	}
 
 	if err := image.NewPPM(cnv).Save("images/ppm/clock.ppm"); err != nil {

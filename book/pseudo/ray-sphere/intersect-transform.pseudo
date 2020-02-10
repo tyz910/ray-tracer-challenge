@@ -1,5 +1,0 @@
-function intersect(sphere, ray)
-  ray2 ← transform(ray, inverse(sphere.transform))
-
-  # ...
-end function

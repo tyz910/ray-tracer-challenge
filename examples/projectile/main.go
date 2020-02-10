@@ -46,13 +46,10 @@ func main() {
 		}
 
 		fmt.Printf("#%d %v\n", i, p.Position)
-
 		p = tick(e, p)
 		i++
 
-		x := p.Position.X()
-		y := float64(c.Height()) - p.Position.Y()
-		c.WritePixel(x, y, color.New(p.Position.Y()/float64(c.Height()), 0.3, 0.3))
+		c.WritePixel(p.Position.X(), float64(c.Height())-p.Position.Y(), color.White())
 	}
 
 	fmt.Printf("\nNumber of ticks: %d\n", i)
