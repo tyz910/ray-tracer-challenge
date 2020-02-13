@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/tyz910/ray-tracer-challenge/internal/canvas"
+	"github.com/tyz910/ray-tracer-challenge/internal/canvas/color"
 	"github.com/tyz910/ray-tracer-challenge/internal/canvas/image"
-	"github.com/tyz910/ray-tracer-challenge/internal/color"
-	"github.com/tyz910/ray-tracer-challenge/internal/tuple"
+	"github.com/tyz910/ray-tracer-challenge/internal/math/tuple"
 )
 
 type projectile struct {

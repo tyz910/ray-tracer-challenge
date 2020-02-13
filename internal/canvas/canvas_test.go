@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/tyz910/ray-tracer-challenge/internal/canvas"
-	"github.com/tyz910/ray-tracer-challenge/internal/color"
+	"github.com/tyz910/ray-tracer-challenge/internal/canvas/color"
 )
 
 // Creating a canvas

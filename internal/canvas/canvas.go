@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/tyz910/ray-tracer-challenge/internal/color"
+	"github.com/tyz910/ray-tracer-challenge/internal/canvas/color"
 )
 
 // Canvas is a rectangular grid of pixels.

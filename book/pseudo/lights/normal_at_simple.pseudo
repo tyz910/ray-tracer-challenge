@@ -1,3 +1,0 @@
-function normal_at(sphere, p)
-  return normalize(p - point(0, 0, 0))
-end function
